@@ -15,5 +15,6 @@ x11vnc -storepasswd AvidiaVNC /home/coder/.vnc/passwd
 sudo systemctl daemon-reload
 sudo systemctl enable x11vnc.service
 sudo systemctl start x11vnc.service
+sudo systemctl restart lightdm
 
 echo "Enjoy! Task Completed!"
