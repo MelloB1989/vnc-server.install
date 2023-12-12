@@ -3,6 +3,7 @@ export DEBIAN_FRONTEND=noninteractive
 echo "Hi! I am here to install vnc server!"
 sudo apt update -y
 echo "Installing Desktop Environment..."
+sudo apt-get remove -y gdm3
 sudo apt install -y --no-install-recommends xfce4 xfce4-goodies
 sudo apt-get install -y --no-install-recommends lightdm x11vnc
 sudo cp ./x11vnc.service /lib/systemd/system/x11vnc.service
