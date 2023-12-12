@@ -1,5 +1,5 @@
 #!/bin/bash
-
+export DEBIAN_FRONTEND=noninteractive
 echo "Hi! I am here to install vnc server!"
 sudo apt update -y
 echo "Installing Desktop Environment..."
