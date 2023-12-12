@@ -3,8 +3,8 @@ export DEBIAN_FRONTEND=noninteractive
 echo "Hi! I am here to install vnc server!"
 sudo apt update -y
 echo "Installing Desktop Environment..."
-sudo apt install -y xfce4 xfce4-goodies
-sudo apt-get install -y lightdm x11vnc
+sudo apt install -y --no-install-recommends xfce4 xfce4-goodies
+sudo apt-get install -y --no-install-recommends lightdm x11vnc
 sudo cp ./x11vnc.service /lib/systemd/system/x11vnc.service
 sudo cp ./lightdm.conf /etc/lightdm/lightdm.conf.d/lightdm.conf
 sudo useradd -m avidia
