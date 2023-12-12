@@ -5,6 +5,15 @@ sudo apt update -y
 echo "Installing Desktop Environment..."
 sudo apt install -y xfce4 xfce4-goodies
 sudo apt-get install -y lightdm x11vnc
+sudo cp ./x11vnc.service /lib/systemd/system/x11vnc.service
+sudo cp ./lightdm.conf /etc/lightdm/lightdm.conf.d/lightdm.conf
+sudo useradd -m avidia
+echo "avidia:avidia" | sudo chpasswd
+sudo usermod -aG sudo avidia
+x11vnc -storepasswd AvidiaVNC /home/coder/.vnc/passwd
 
+sudo systemctl daemon-reload
+sudo systemctl enable x11vnc.service
+sudo systemctl start x11vnc.service
 
 echo "Enjoy! Task Completed!"
