@@ -17,9 +17,9 @@ vncserver
 
 # Configuring VNC Server
 vncserver -kill :1
-cd && cd /home/ubuntu
+cd && cd /home/coder
 mv ~/.vnc/xstartup ~/.vnc/xstartup.bak
-sudo mv xstartup /home/ubuntu/.vnc
+sudo mv xstartup /home/coder/.vnc
 sudo chmod +x ~/.vnc/xstartup
 
 # Start VNC Server with the new setup
