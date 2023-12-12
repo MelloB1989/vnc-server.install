@@ -10,7 +10,8 @@ sudo cp ./lightdm.conf /etc/lightdm/lightdm.conf.d/lightdm.conf
 sudo useradd -m avidia
 echo "avidia:avidia" | sudo chpasswd
 sudo usermod -aG sudo avidia
-x11vnc -storepasswd AvidiaVNC /home/coder/.vnc/passwd
+sudo mkdir ~/.vnc
+x11vnc -storepasswd AvidiaVNC ~/.vnc/passwd
 
 sudo systemctl daemon-reload
 sudo systemctl enable x11vnc.service
